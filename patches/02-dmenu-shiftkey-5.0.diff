@@ -1,3 +1,12 @@
+From 7955d695d0f53277c87e818a82bf79aff48114f2 Mon Sep 17 00:00:00 2001
+From: kumao <arturleivarx@gmail.com>
+Date: Wed, 15 Jun 2022 13:09:57 +0200
+Subject: [PATCH] applied shiftkey patch
+
+---
+ dmenu.c | 20 +++++++++++---------
+ 1 file changed, 11 insertions(+), 9 deletions(-)
+
 diff --git a/dmenu.c b/dmenu.c
 index 2e1fb56..0db43eb 100644
 --- a/dmenu.c
@@ -27,7 +36,7 @@ index 2e1fb56..0db43eb 100644
  		default:
  			return;
  		}
-@@ -482,20 +491,13 @@ insert:
+@@ -482,20 +491,13 @@ keypress(XKeyEvent *ev)
  		if (lines > 0)
  			return;
  		/* fallthrough */
