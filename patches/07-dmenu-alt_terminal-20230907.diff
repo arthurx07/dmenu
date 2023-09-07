@@ -1,0 +1,22 @@
+diff --git a/dmenu.c b/dmenu.c
+index 74d67d5..1103292 100644
+--- a/dmenu.c
++++ b/dmenu.c
+@@ -509,6 +509,17 @@ keypress(XKeyEvent *ev)
+ 		case XK_j: ksym = XK_Next;  break;
+ 		case XK_k: ksym = XK_Prior; break;
+ 		case XK_l: ksym = XK_Down;  break;
++        case XK_Return:
++        case XK_KP_Enter:
++            // puts((sel && !(ev->state & ShiftMask)) ? sel->text : text);
++            printf("st -e %s", sel->text);
++            if (!(ev->state & ControlMask)) {
++                cleanup();
++                exit(0);
++            }
++            if (sel)
++                sel->out = 1;
++            break;
+ 		default:
+ 			return;
+ 		}
