@@ -2,10 +2,6 @@
 /* Default settings; can be overriden by command line. */
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
-static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
-static const int vertpad = 10;              /* vertical padding of bar */
-static const int sidepad = 30;              /* horizontal padding of bar */
-
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"monospace:size=10"
