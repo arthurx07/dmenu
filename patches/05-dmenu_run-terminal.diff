@@ -15,5 +15,5 @@ index 834ede5..ca50c39 100755
 +
 +case $cmd in
 +    *\!) "${TERMINAL:-st}" -e "${cmd%?}" & ;;
-+    *)   "${cmd | ${SHELL:-"bin/sh"}}" & ;;
++    *)   "${cmd}" & ;;
 +esac
