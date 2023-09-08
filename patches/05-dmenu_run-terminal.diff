@@ -11,9 +11,9 @@ index 834ede5..ca50c39 100755
 +
 +test -s "$HOME"/.dmenurc && . "$HOME"/.dmenurc
 +
-+cmd="$(dmenu_path | dmenu "$@")"
++cmd=$(dmenu_path | dmenu "$@")
 +
 +case $cmd in
 +    *\!) "${TERMINAL:-st}" -e "${cmd%?}" & ;;
-+    *)   "${cmd}" & ;;
++    *)   ${cmd} & ;; # | ${SHELL:-"/bin/sh"}
 +esac
