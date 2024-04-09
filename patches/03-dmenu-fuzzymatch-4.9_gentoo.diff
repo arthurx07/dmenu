@@ -18,8 +18,8 @@ index 1edb647..51612b9 100644
  
  static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 +static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
- static const int vertpad = 5;              /* vertical padding of bar */
- static const int sidepad = 30;              /* horizontal padding of bar */
+ static const int vertpad = 22;              /* vertical padding of bar */
+ static const int sidepad = 60;              /* horizontal padding of bar */
 
 diff --git a/config.mk b/config.mk
 index 0929b4a..d14309a 100644
