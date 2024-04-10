@@ -33,7 +33,7 @@ index 323f93c..f2a82b4 100644
 --- a/dmenu.1
 +++ b/dmenu.1
 @@ -6,6 +6,8 @@ dmenu \- dynamic menu
- .RB [ \-bfiv ]
+ .RB [ \-bfivP ]
  .RB [ \-l
  .IR lines ]
 +.RB [ \-h
@@ -55,13 +55,13 @@ diff --git a/dmenu.c b/dmenu.c
 index e7be8af..82b204b 100644
 --- a/dmenu.c
 +++ b/dmenu.c
-@@ -148,7 +148,7 @@ drawmenu(void)
+@@ -157,7 +157,7 @@ drawmenu(void)
  {
  	unsigned int curpos;
  	struct item *item;
 -	int x = 0, y = 0, w;
 +	int x = 0, y = 0, fh = drw->fonts->h, w;
-	char *censort;
+ 	char *censort;
  
  	drw_setscheme(drw, scheme[SchemeNorm]);
 @@ -165,7 +165,7 @@ drawmenu(void)
