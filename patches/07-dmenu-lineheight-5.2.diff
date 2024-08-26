@@ -33,7 +33,7 @@ index 323f93c..f2a82b4 100644
 --- a/dmenu.1
 +++ b/dmenu.1
 @@ -6,6 +6,8 @@ dmenu \- dynamic menu
- .RB [ \-bfivP ]
+ .RB [ \-bFfivP ]
  .RB [ \-l
  .IR lines ]
 +.RB [ \-h
@@ -85,8 +85,8 @@ index e7be8af..82b204b 100644
  static void
  usage(void)
  {
--	die("usage: dmenu [-bfivP] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
-+	die("usage: dmenu [-bfivP] [-l lines] [-h height] [-p prompt] [-fn font] [-m monitor]\n"
+-	die("usage: dmenu [-bFfivP] [-l lines] [-p prompt] [-fn font] [-m monitor]\n"
++	die("usage: dmenu [-bFfivP] [-l lines] [-h height] [-p prompt] [-fn font] [-m monitor]\n"
  	    "             [-nb color] [-nf color] [-sb color] [-sf color] [-w windowid]");
  }
  
