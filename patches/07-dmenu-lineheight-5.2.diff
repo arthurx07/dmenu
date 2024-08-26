@@ -18,7 +18,7 @@ diff --git a/config.def.h b/config.def.h
 index 1edb647..4394dec 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -15,6 +15,9 @@ static const char *colors[SchemeLast][2] = {
+@@ -15,6 +15,9 @@ static char *colors[SchemeLast][2] = {
  };
  /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
  static unsigned int lines      = 0;
