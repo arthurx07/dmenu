@@ -1,2 +1,11 @@
 #!/bin/sh
-dmenu_path | dmenu "$@" | ${SHELL:-"/bin/sh"} &
+
+# dmenu_run improved
+# command ending with '!', is started in the terminal.
+
+cmd=$(dmenu_path | dmenu "$@")
+
+case $cmd in
+    *\!) st -e "${cmd%?}" & ;; # write program! to execute program in a terminal
+    *) ${cmd} & ;; # | ${SHELL:-"/bin/sh"}
+esac
